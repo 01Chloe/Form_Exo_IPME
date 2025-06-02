@@ -11,94 +11,113 @@
     <main>
       <h1>Formulaire Profil</h1>
       <form class="form">
-        <label for="lname">Nom</label>
-        <input type="text" name="lname" id="lname" required />
-
-        <label for="fname">Prénom</label>
-        <input type="text" name="fname" id="fname" required />
-
-        <div class="input-group">
-          <label for="age">Age</label>
-          <input type="number" name="age" id="age" required />
-
-          <p>Sexe</p>
-          <label for="mgender">Homme</label>
-          <input
-            type="radio"
-            name="gender"
-            id="mgender"
-            class="gender"
-            value="Homme"
-          />
-          <label for="fgender">Femme</label>
-          <input
-            type="radio"
-            name="gender"
-            id="fgender"
-            class="gender"
-            value="Femme"
-          />
+        <div class="input-group-row">
+          <div class="input-group">
+            <label for="lname">Nom</label>
+            <input type="text" name="lname" id="lname" required />
+          </div>
+          <div class="input-group">
+            <label for="fname">Prénom</label>
+            <input type="text" name="fname" id="fname" required />
+          </div>
         </div>
 
-        <div class="input-group">
-          <label for="job">Profession</label>
-          <select name="job" id="job">
-            <option value="">--Séléctionner--</option>
-            <option value="job1">Job1</option>
-            <option value="job2">Job2</option>
-            <option value="job3">Job3</option>
-          </select>
+        <div class="input-group-row">
+          <div class="input-group">
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" required />
+          </div>
 
-          <label for="region">Région</label>
-          <select name="region" id="region">
-            <option value="">--Séléctionner--</option>
-            <option value="region1">Région1</option>
-            <option value="region2">Région2</option>
-            <option value="region3">Région3</option>
-          </select>
+          <div class="input-group">
+            <p class="gender-label">Sexe</p>
+            <div class="gender-group">
+              <input
+                type="radio"
+                name="gender"
+                id="mgender"
+                class="gender"
+                value="Homme"
+              />
+              <label for="mgender">Homme</label>
+              <input
+                type="radio"
+                name="gender"
+                id="fgender"
+                class="gender"
+                value="Femme"
+              />
+              <label for="fgender">Femme</label>
+            </div>
+          </div>
         </div>
 
-        <p>Hobbies</p>
-        <input
-          type="checkbox"
-          name="hobbies"
-          id="read"
-          value="Lecture"
-          class="hobbies"
-        />
-        <label for="read">Lecture</label>
-        <input
-          type="checkbox"
-          name="hobbies"
-          id="sport"
-          value="Sport"
-          class="hobbies"
-        />
-        <label for="sport">Sport</label>
-        <input
-          type="checkbox"
-          name="hobbies"
-          id="game"
-          value="Jeux vidéo"
-          class="hobbies"
-        />
-        <label for="game">Jeux vidéo</label>
-        <input
-          type="checkbox"
-          name="hobbies"
-          id="music"
-          value="Musique"
-          class="hobbies"
-        />
-        <label for="music">Musique</label>
-        <input
-          type="checkbox"
-          name="hobbies"
-          id="travel"
-          value="Voyage"
-          class="hobbies"
-        />
-        <label for="travel">Voyage</label>
+        <div class="input-group-row">
+          <div class="input-group">
+            <label for="job">Profession</label>
+            <select name="job" id="job">
+              <option value="">--Séléctionner--</option>
+              <option value="job1">Job1</option>
+              <option value="job2">Job2</option>
+              <option value="job3">Job3</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="region">Région</label>
+            <select name="region" id="region">
+              <option value="">--Séléctionner--</option>
+              <option value="region1">Région1</option>
+              <option value="region2">Région2</option>
+              <option value="region3">Région3</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="input-group-col">
+          <p class="hobbies-label">Hobbies</p>
+          <div class="hobbies-group">
+            <input
+              type="checkbox"
+              name="hobbies"
+              id="read"
+              value="Lecture"
+              class="hobbies"
+            />
+            <label for="read">Lecture</label>
+            <input
+              type="checkbox"
+              name="hobbies"
+              id="sport"
+              value="Sport"
+              class="hobbies"
+            />
+            <label for="sport">Sport</label>
+            <input
+              type="checkbox"
+              name="hobbies"
+              id="game"
+              value="Jeux vidéo"
+              class="hobbies"
+            />
+            <label for="game">Jeux vidéo</label>
+            <input
+              type="checkbox"
+              name="hobbies"
+              id="music"
+              value="Musique"
+              class="hobbies"
+            />
+            <label for="music">Musique</label>
+            <input
+              type="checkbox"
+              name="hobbies"
+              id="travel"
+              value="Voyage"
+              class="hobbies"
+            />
+            <label for="travel">Voyage</label>
+          </div>
+        </div>
 
         <div class="input-group">
           <label for="social">Lien LinkedIn</label>

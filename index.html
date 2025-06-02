@@ -102,7 +102,13 @@
 
         <div class="input-group">
           <label for="social">Lien LinkedIn</label>
-          <input type="text" name="social" id="social" required />
+          <input
+            type="url"
+            name="social"
+            id="social"
+            pattern="https://.*"
+            required
+          />
         </div>
 
         <button type="submit">Valider</button>
@@ -116,7 +122,7 @@
         <p>Profession : <span class="display-job"></span></p>
         <p>Région : <span class="display-region"></span></p>
         <p>Hoobies : <span class="display-hobbies"></span></p>
-        <p>LinkedIn : <span class="display-social-link"></span></p>
+        <p>LinkedIn : <a class="display-social-link" target="_blank"></a></p>
       </div>
     </main>
   </body>

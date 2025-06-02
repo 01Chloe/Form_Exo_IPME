@@ -6,6 +6,7 @@ const gender = document.querySelectorAll(".gender");
 const job = document.querySelector("#job");
 const region = document.querySelector("#region");
 const hobbies = document.querySelectorAll(".hobbies");
+const socialLink = document.querySelector("#social");
 const formValueContainer = document.querySelector(".form-value-container");
 const displayLName = document.querySelector(".display-lname");
 const displayFName = document.querySelector(".display-fname");
@@ -15,6 +16,7 @@ const displayJob = document.querySelector(".display-job");
 const displayRegion = document.querySelector(".display-region");
 const displayHobbies = document.querySelector(".display-hobbies");
 let userHobbies = [];
+const displayLink = document.querySelector(".display-social-link");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -30,6 +32,7 @@ form.addEventListener("submit", (e) => {
   for (let i = 0; i < hobbies.length; i++) {
     if (hobbies[i].checked) hobbies[i].checked = false;
   }
+  socialLink.value = "";
 });
 
 function displayFormValue() {
@@ -54,4 +57,6 @@ function displayFormValue() {
       displayHobbies.innerHTML += ", " + userHobbies[i];
     }
   }
+  displayLink.innerHTML = socialLink.value;
+  displayLink.href = socialLink.value;
 }

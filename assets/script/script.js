@@ -1,18 +1,23 @@
 const form = document.querySelector(".form");
 const lname = document.querySelector("#lname");
 const fname = document.querySelector("#fname");
+const age = document.querySelector("#age");
 const formValueContainer = document.querySelector(".form-value-container");
-const lastName = document.querySelector(".lname");
-const firstName = document.querySelector(".fname");
+const displayLName = document.querySelector(".display-lname");
+const displayFName = document.querySelector(".display-fname");
+const displayAge = document.querySelector(".display-age");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   displayFormValue();
   lname.value = "";
   fname.value = "";
+  age.value = "";
 });
 
 function displayFormValue() {
-  lastName.innerHTML = lname.value;
-  firstName.innerHTML = fname.value;
+  formValueContainer.classList.remove("hide");
+  displayLName.innerHTML = lname.value;
+  displayFName.innerHTML = fname.value;
+  displayAge.innerHTML = age.value;
 }

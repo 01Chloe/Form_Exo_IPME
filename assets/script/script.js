@@ -3,11 +3,13 @@ const lname = document.querySelector("#lname");
 const fname = document.querySelector("#fname");
 const age = document.querySelector("#age");
 const gender = document.getElementsByName("gender");
+const job = document.querySelector("#job");
 const formValueContainer = document.querySelector(".form-value-container");
 const displayLName = document.querySelector(".display-lname");
 const displayFName = document.querySelector(".display-fname");
 const displayAge = document.querySelector(".display-age");
 const displayGender = document.querySelector(".display-gender");
+const displayJob = document.querySelector(".display-job");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -15,6 +17,10 @@ form.addEventListener("submit", (e) => {
   lname.value = "";
   fname.value = "";
   age.value = "";
+  for (let i = 0; i < gender.length; i++) {
+    if (gender[i].checked) gender[i].checked = false;
+  }
+  job.value = "";
 });
 
 function displayFormValue() {
@@ -25,4 +31,5 @@ function displayFormValue() {
   for (i = 0; i < gender.length; i++) {
     if (gender[i].checked) displayGender.innerHTML = gender[i].value;
   }
+  displayJob.innerHTML = job.value;
 }
